@@ -10,6 +10,10 @@ header p {
   z-index: 3;
   font-size: 20px;
   font-weight: 700;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 /*hamburger*/
@@ -114,7 +118,7 @@ header p {
 }
 
 .input-projects {
-  background-color: #828282;
+  /* background-color: #828282; */
   margin: 20px 15px 0 15px;
 
   div {
@@ -136,10 +140,12 @@ header p {
         border-radius: 8px;
         border: none;
         height: 40px;
+        border: 2px solid #e8ecf4;
       }
       textarea {
         border-radius: 8px;
         height: 160px;
+        border: 2px solid #e8ecf4;
       }
     }
     /*button*/
@@ -148,7 +154,6 @@ header p {
       text-align: center;
       button {
         background-color: aqua;
-
         border-radius: 8px;
         padding: 8px 24px;
         border: none;
@@ -218,7 +223,7 @@ header p {
     background: white;
     width: 100%;
     position: fixed;
-    padding: 14px 30px;
+    padding: 14px 115px;
     top: 0;
     left: 0;
     z-index: 1;
