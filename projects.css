@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header p {
+  /* left: 0; */
+  margin: 15px 0 0 15px;
+  position: fixed;
+  z-index: 3;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*hamburger*/
+.header {
+  /* right: -10px; */
+  position: fixed;
+  z-index: 2;
+  right: 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar {
+  display: none;
+  margin-right: 20px;
+  background-color: rgb(78, 175, 232);
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.hamburger {
+  padding-right: 10px;
+  font-size: 30px;
+  padding-top: 5px;
+}
+
+.close {
+  display: none;
+  padding-left: 100px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#menu:checked ~ .close {
+  display: block;
+}
+
+#menu:checked ~ .hamburger {
+  display: none;
+}
+
+#menu:checked ~ .navbar {
+  display: block;
+  width: 120px;
+  font-weight: 700;
+}
+
+.navbar a {
+  color: #25282b;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+/*gambar pp*/
+
+.image {
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+  img {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    border-radius: 100%;
+    object-position: center 50px;
+  }
+}
+
+.about {
+  p {
+    &:nth-child(1) {
+      color: #333333;
+      font-weight: 700;
+      font-size: 48px;
+      text-align: center;
+    }
+    &:nth-child(2) {
+      color: #828282;
+      font-size: 24px;
+      margin: 32px 0;
+      padding: 0 10px;
+      text-align: center;
+    }
+  }
+
+  .button {
+    text-align: center;
+    button {
+      background-color: aqua;
+
+      border-radius: 8px;
+      padding: 8px 24px;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: #25282b;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.input-projects {
+  background-color: #828282;
+  margin: 20px 15px 0 15px;
+
+  div {
+    &:nth-child(1) {
+      p {
+        font-size: 60px;
+        text-align: center;
+      }
+    }
+    /*label*/
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+      label {
+        margin: 8px 0;
+      }
+      input {
+        border-radius: 8px;
+        border: none;
+        height: 40px;
+      }
+      textarea {
+        border-radius: 8px;
+        height: 160px;
+      }
+    }
+    /*button*/
+    &:nth-child(3) {
+      /* display: flex; */
+      text-align: center;
+      button {
+        background-color: aqua;
+
+        border-radius: 8px;
+        padding: 8px 24px;
+        border: none;
+        margin-top: 24px;
+      }
+      a {
+        color: #25282b;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+    /*logo*/
+    &:nth-child(4) {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        /* width: 100%; */
+        width: 60px;
+        height: 60px;
+      }
+      a {
+        &:nth-child(3) {
+          img {
+            /* height: 100px; */
+          }
+        }
+      }
+    }
+    /*aditya*/
+    &:nth-child(5) {
+      text-align: center;
+      font-size: 18px;
+      color: black;
+      /* position: absolute; */
+    }
+  }
+}
+
+.footer-bg {
+  position: relative;
+  width: 100vw;
+  padding: 0;
+}
+
+.footer-bg img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger,
+  .close {
+    display: none;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  header {
+    background: white;
+    width: 100%;
+    position: fixed;
+    padding: 14px 30px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .image-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    .image {
+      grid-column: 2/3;
+      margin-top: 20px;
+    }
+    .about {
+      grid-column: 1/2;
+      text-align: left;
+      margin-top: -250px;
+      margin-left: 120px;
+      margin-bottom: 100px;
+
+      p {
+        &:nth-child(1) {
+          text-align: start;
+        }
+        &:nth-child(2) {
+          text-align: start;
+        }
+      }
+      .button {
+        text-align: start;
+      }
+    }
+  }
+
+  .input-projects {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    div {
+      &:nth-child(3) {
+        text-align: end;
+      }
+    }
+  }
+}
