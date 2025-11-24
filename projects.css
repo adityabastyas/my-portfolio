@@ -278,5 +278,9 @@ header p {
         text-align: end;
       }
     }
+    label {
+      font-size: large;
+      font-weight: 500;
+    }
   }
 }
