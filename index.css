@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font-comfortaa: "Comfortaa", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-playfair-display: "Playfair Display", serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,18 +23,19 @@ header {
   right: 0;
   z-index: 10;
   background-color: transparent;
-  p {
+  h1 {
     display: none;
+    font-family: var(--font-comfortaa);
   }
 }
 
 .navbar {
   display: none;
-  margin-right: 20px;
   background-color: white;
-  /* padding:; */
-  padding: 0 10px;
+  padding-right: 30px;
+  padding-top: 10px;
   border-radius: 10px;
+  font-family: var(--font-raleway);
 }
 
 .hamburger {
@@ -35,7 +46,7 @@ header {
 
 .close {
   display: none;
-  padding-left: 100px;
+  padding-left: 90px;
   font-size: 40px;
   font-weight: 700;
 }
@@ -63,10 +74,6 @@ header {
 }
 
 /*gambar pp*/
-/* 
-.right {
-  right: 0;
-} */
 
 .hero {
   display: block;
@@ -78,7 +85,7 @@ header {
   right: -10px;
   width: 100%;
   height: 500px;
-  background-image: url("/image/adit.png"); /* FOTO ADIT */
+  background-image: url("/image/adit.png");
   background-size: cover;
   background-position: center;
 
@@ -93,30 +100,29 @@ header {
 }
 
 /*ket profil*/
+
 .left-section {
-  /* margin-top: 300px; */
-  /* background-color: darksalmon; */
-  /* padding-top: 50px; */
-  width: 100%;
+  padding-inline: 15px;
 }
 
 .job {
   color: #fdc435;
-  /* font-family: Nunito; */
+  font-family: var(--font-nunito);
 }
 
 .left-section h1 {
-  /* font-family: Playfair Display; */
+  font-family: var(--font-playfair-display);
   font-weight: 700px;
   font-size: 30px;
   color: #333333;
   margin-top: 12px;
   margin-bottom: 32px;
   position: relative;
+  width: 100%;
 }
 
 .iam {
-  /* font-family: Nunito; */
+  font-family: var(--font-nunito);
   font-weight: 400px;
   font-size: 24px;
   color: #828282;
@@ -126,6 +132,7 @@ header {
 .button {
   display: flex;
   gap: 12px;
+  justify-content: center;
 }
 
 .button .projects-button {
@@ -136,7 +143,7 @@ header {
 }
 
 .button .projects {
-  /* font-family: Roboto; */
+  font-family: var(--font-roboto);
   font-weight: 500px;
   font-size: 18px;
   color: #25282b;
@@ -151,7 +158,7 @@ header {
 }
 
 .button .linkedin {
-  /* font-family: Roboto; */
+  font-family: var(--font-roboto);
   color: #25282b;
   font-size: 18px;
   font-weight: 500;
@@ -161,27 +168,36 @@ header {
 /*PROJECS*/
 
 .pro {
-  margin: 0;
+  /* margin: 0; */
   /* background-color: #333333; */
 }
 .pro > div > p {
+  display: grid;
+  grid-row: 1fr;
+  margin: 0;
   color: #25282b;
+  /* background-color: red; */
   font-weight: 700;
   font-size: 48px;
   text-align: center;
+  font-family: var(--font-playfair-display);
 }
 
 .pro .conten {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   margin: 0;
   div {
     &:nth-child(1) {
-      background-color: aqua;
+      /* background-color: aqua; */
       width: 100%;
       p {
         &:nth-child(1) {
+          margin: 0;
           padding-top: 20px;
           font-size: 40px;
           color: #25282b;
+          /* background-color: yellow; */
         }
         &:nth-child(2) {
           color: #828282;
@@ -191,11 +207,10 @@ header {
       }
       button {
         margin-top: 30px;
-        /* right: 0; */
         margin-bottom: 10px;
         border-radius: 10px;
         border: 1px solid black;
-        /* background-color: red; */
+
         justify-content: center;
         a {
           text-decoration: none;
@@ -205,13 +220,7 @@ header {
       }
     }
     &:nth-child(2) {
-      /* background-color: green; */
-      /* padding: 10px; */
-      /* font-size: 50px; */
-      /* width: 250px;
-      height: 250px; */
       img {
-        /* width: 420px; */
         width: 100%;
       }
     }
@@ -323,21 +332,19 @@ header {
     background: transparent;
     width: 100%;
     position: fixed;
-    padding: 14px 120px;
+    padding-inline: 120px;
     top: 0;
     left: 0;
     z-index: 1;
   }
 
-  header p {
-    /* left: 0; */
-    margin: 15px 0 0 15px;
+  header h1 {
+    margin: 0;
     position: fixed;
     z-index: 3;
     font-size: 20px;
     font-weight: 700;
     display: inline-block;
-    padding-left: 30px;
     a {
       text-decoration: none;
       color: black;
@@ -347,7 +354,7 @@ header {
   .navbar {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 48px;
     border: none;
     background: none;
     padding: 0;
@@ -355,27 +362,9 @@ header {
 
   .hero {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
-    padding: 40px 30px;
-    gap: 40px;
     position: relative;
-  }
-
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin-left: 10px;
-    .right {
-      margin-top: -30px;
-      grid-column: 3/4;
-    }
-    .left-section {
-      text-align: left;
-      grid-column: 1/3;
-      margin-top: -500px;
-    }
   }
 
   .right-section {
@@ -384,7 +373,7 @@ header {
     right: 0px;
     width: 500px;
     height: 500px;
-    background-image: url("/image/adit.png"); /* FOTO ADIT */
+    background-image: url("/image/adit.png");
     background-size: cover;
     background-position: center;
 
@@ -420,20 +409,21 @@ header {
   }
 
   .pro {
-    max-width: 850px;
+    max-width: 70%;
     margin: 0 auto;
     padding: 0 24px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
   }
 
   .pro .conten {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 
-  .pro .conten > div:nth-child(1),
+  .pro .conten > div:nth-child(1) {
+    grid-column: 1/2;
+  }
   .pro .conten > div:nth-child(2) {
-    width: 50%;
+    grid-column: 2/3;
   }
 }
